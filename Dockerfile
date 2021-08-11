@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 RUN ./gradlew build
 
-FROM openjdk:8-jre-slim
+FROM openjdk:11
 
 WORKDIR /app
 EXPOSE 8080
