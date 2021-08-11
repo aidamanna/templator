@@ -2,7 +2,7 @@ FROM gradle:7-jdk11-hotspot AS build
 
 WORKDIR /app
 COPY . .
-RUN ./gradlew build
+RUN ./gradlew assemble
 
 FROM openjdk:11
 
