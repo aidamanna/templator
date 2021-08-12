@@ -2,7 +2,7 @@ FROM gradle:7-jdk11-hotspot AS build
 
 WORKDIR /app
 COPY . .
-VOLUME /.gradle/caches:/.gradle/caches
+VOLUME /.gradle/caches:/home/gradle/.gradle
 RUN ./gradlew assemble check
 
 FROM openjdk:11
